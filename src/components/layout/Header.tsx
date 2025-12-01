@@ -5,23 +5,23 @@ import { Menu, X } from "lucide-react";
 
 export default function PageNavHeader() {
   const [open, setOpen] = useState(false);
-
+ 
   return (
-    <header className="w-full bg-[#1B9AAA] relative z-50">
+    <header className="hidden md:block w-full bg-[#1B9AAA] relative z-50">
 
       {/* Top Blue Line */}
-      <div className="w-full h-[3px] bg-[#0066A6]"></div>
+      {/* <div className="w-full h-[3px] bg-[#0066A6]"></div> */}
 
       {/* DESKTOP NAV */}
       <nav className="hidden md:flex w-full justify-end px-8">
         <div
           className="
-            max-w-full  px-6 
+            max-w-full  px-4 
             flex justify-end items-center
             h-[66px]
-            gap-12
+            gap-8
             text-white
-            text-[17px]
+            text-[14px]
           "
         >
           <a href="#trajectories" className="hover:opacity-80 transition">Trajectories</a>

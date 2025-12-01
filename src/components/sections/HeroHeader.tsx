@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroHeader() {
   return (
     <header className="w-full bg-white py-3  ">
-      <div className="max-w-[1400px] mx-auto px-8 flex justify-between items-center">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-8 flex justify-between items-center">
 
         {/* LEFT LOGOS */}
         <div className="flex items-center gap-4">

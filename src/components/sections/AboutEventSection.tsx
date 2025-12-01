@@ -8,17 +8,17 @@ export default function AboutEventSection() {
         {/* LEFT TEXT BLOCK */}
         <div className="flex flex-col justify-center">
           
-          <p className="text-[30px] text-gray-900 mb-3">
+          <p className="md:text-[30px] text-[23px] text-gray-900 mb-3">
             About the Event
           </p>
 
-          <h2 className="text-[52px] leading-[50px] font-medium text-gray-900 mb-8">
+          <h2 className="md:text-[52px] text-[36px] leading-[50px] font-medium text-gray-900  mb-3 md:mb-8">
             Navigating the<br />
             New Global
             Order
           </h2>
 
-          <p className="text-[16px] leading-[28px] text-gray-700 mb-6">
+          <p className="md:text-[16px] text-[14px] leading-[28px] text-gray-700 mb-6 text-justify">
             We are witnessing a transformative era marked by rapid shifts in global 
             power dynamics and systemic disruptions. Key drivers such as artificial 
             intelligence, war and trade conflicts, geopolitical realignments, digital 
@@ -32,7 +32,17 @@ export default function AboutEventSection() {
             identity, and values.
           </p>
 
-          <p className="text-[16px] leading-[28px] text-gray-700">
+          {/* MOBILE IMAGE */}
+          <div className="relative w-full h-[250px] mb-6 lg:hidden block">
+            <Image
+              src="/images/buildingImg.png"
+              alt="TAPMI Bengaluru Building"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <p className="md:text-[16px] text-[14px]  leading-[28px] text-gray-700 text-justify">
             In this evolving context, the need to understand and make sense of the 
             structural and affective impact of such changes is both urgent & necessary. 
             It is in this context that TAPMI Bengaluru, MAHE, in collaboration with 
@@ -44,8 +54,8 @@ export default function AboutEventSection() {
 
         </div>
 
-        {/* RIGHT IMAGE BLOCK */}
-        <div className="relative w-full h-[600px] lg:h-full">
+        {/* RIGHT IMAGE BLOCK - DESKTOP ONLY */}
+        <div className="relative w-full h-[600px] lg:h-full hidden lg:block">
           <Image
             src="/images/buildingImg.png" // update path
             alt="TAPMI Bengaluru Building"
