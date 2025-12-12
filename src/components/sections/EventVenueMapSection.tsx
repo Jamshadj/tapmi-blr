@@ -8,7 +8,7 @@ export default function EventVenueSection() {
       <div className="block md:hidden w-full">
 
         {/* EVENT VENUE CARD */}
-        <div className="w-full bg-[#1BA3B9] text-white px-8 py-12">
+        <div className="w-full bg-[#1BA3B9] text-white px-12 py-12">
           <h2 className="text-2xl font-medium mb-4">Event Venue</h2>
 
           <p className="text-[15px] font-thin leading-6 mb-4">
