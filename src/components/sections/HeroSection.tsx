@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="flex-1 w-full bg-gradient-to-r from-white via-[#bbedf7] to-[#B8EDF7] relative flex flex-col">
         
         {/* Main Content Container */}
-        <div className="flex-1 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-1 flex items-center relative z-10">
+        <div className="flex-1 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-15 flex items-center relative z-10">
           {/* LEFT CONTENT */}
           <div className="w-full lg:w-[55%] py-4 -mt-28 md:mt-0 sm:py-6 lg:py-8">
             <p className="text-[18px] sm:text-[24px] lg:text-[32px] text-[#1E9BB0] font-normal">
@@ -50,7 +50,7 @@ export default function HeroSection() {
 
         {/* BOTTOM VENUE STRIP - Desktop/Tablet */}
         <div className="hidden sm:block w-full bg-[#1E9BB0] text-white py-3 sm:py-4 lg:py-6 relative z-5">
-          <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-18 lg2:px-12 text-[14px] sm:text-[20px] lg:text-[24px] flex flex-col gap-1 sm:gap-2">
+          <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-15 lg2:px-12 text-[14px] sm:text-[20px] lg:text-[24px] flex flex-col gap-1 sm:gap-2">
             <p>
               <span className="font-semibold">Venue:</span> TAPMI, MAHE Bengaluru Campus
             </p>

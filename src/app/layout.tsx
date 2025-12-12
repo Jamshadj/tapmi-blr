@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import LenisProvider from "../components/providers/LenisProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +15,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Intersection 2026: Navigating the New Global Order",
   description: "Join us for Intersection 2026, a two-day PhD and Early Career Research colloquium organised by TAPMI Bengaluru, MAHE, in collaboration with Deakin University, Australia",
+  openGraph: {
+    title: "Intersection 2026: Navigating the New Global Order",
+    description: "Join us for Intersection 2026, a two-day PhD and Early Career Research colloquium organised by TAPMI Bengaluru, MAHE, in collaboration with Deakin University, Australia",
+    images: [
+      {
+        url: "/metaImg.png",    // place image inside /public
+        width: 1200,
+        height: 630,
+        alt: "Preview Image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/metaImg.png"],
+  },
 };
 
 export default function RootLayout({
@@ -29,11 +46,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-
-        <main className="flex-1"> {children}</main>
-        
-        <Footer />
+        <LenisProvider>
+          <Header />
+          <main className="flex-1"> {children}</main>
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );
