@@ -20,7 +20,7 @@ export default function EventVenueSection() {
 
           <a
             href="#"
-            className="inline-block text-[16px] font-thin text-white/90 border-b-[1.5px] border-white/80 mb-8"
+            className="inline-block text-[16px] font-thin text-white/90 border-b border-white/80 mb-8"
           >
             View on Maps
           </a>
@@ -56,6 +56,7 @@ export default function EventVenueSection() {
           referrerPolicy="no-referrer-when-downgrade"
         />
 
+
         {/* OVERLAY CARD */}
         <div
           className="
@@ -78,7 +79,7 @@ export default function EventVenueSection() {
             href="#"
             className="
               inline-block text-[18px] font-thin 
-              text-white/90 border-b-[2px] border-white/80 
+              text-white/90 border-b-2 border-white/80 
               mb-10
             "
           >
