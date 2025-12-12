@@ -2,9 +2,21 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { scroller } from "react-scroll";
+
 
 export default function PageNavHeader() {
   const [open, setOpen] = useState(false);
+
+    const scrollToSection = (id: string) => {
+    setOpen(false);
+    scroller.scrollTo(id, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+
  
   return (
     <header className="hidden md:block w-full bg-[#1B9AAA] relative z-50">
@@ -24,19 +36,23 @@ export default function PageNavHeader() {
             text-[14px]
           "
         >
-          <a href="#trajectories" className="hover:opacity-80 transition">Trajectories</a>
-          <a href="#important-dates" className="hover:opacity-80 transition">Important Dates</a>
-          <a href="#registration" className="hover:opacity-80 transition">Registration & Participation</a>
-          <a href="#schedule" className="hover:opacity-80 transition">Schedule</a>
-          <a href="#venue" className="hover:opacity-80 transition">Venue</a>
-          <a href="#submit" className=" hover:opacity-80 transition">Submit Your Abstract</a>
+          <a  onClick={() => scrollToSection("trajectories")}   className="hover:opacity-80 transition">Trajectories</a>
+          <a onClick={() => scrollToSection("important-dates")}  href="#important-dates" className="hover:opacity-80 transition">Important Dates</a>
+          <a onClick={() => scrollToSection("registration")} href="#registration" className="hover:opacity-80 transition">Registration & Participation</a>
+          <a onClick={() => scrollToSection("schedule")} href="#schedule" className="hover:opacity-80 transition">Schedule</a>
+          <a onClick={() => scrollToSection("venue")} href="#venue" className="hover:opacity-80 transition">Venue</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className=" hover:opacity-80 transition">Submit Your Abstract</a>
         </div>
       </nav>
 
 
       {/* MOBILE NAV */}
-      <div className="md:hidden flex justify-start items-center px-6 h-[66px] text-white">
-        {/* Hamburger Menu on Left */}
+      <div className="md:hidden flex justify-between items-center px-6 h-[66px] text-white">
+
+        {/* Left blank area (optional, can place logo here) */}
+        <div></div>
+
+        {/* Hamburger Menu */}
         <button onClick={() => setOpen(true)}>
           <Menu className="w-7 h-7" />
         </button>

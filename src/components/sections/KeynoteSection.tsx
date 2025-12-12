@@ -51,6 +51,7 @@
 
     return (
       <div className="w-full py-16 bg-white">
+
         <div className="max-w-7xl mx-auto px-6 md:px-4">
           {/* KEYNOTE SPEAKERS */}
           <h2 className="text-center  text-[32px] md:text-[44px] font-medium mb-8">
@@ -158,6 +159,7 @@
         </div>
       </div>
     </div>
+    
   </div>
 )}
 

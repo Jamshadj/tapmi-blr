@@ -58,7 +58,7 @@ export default function Footer() {
             {/* Email */}
             <div className="flex items-center gap-3 text-lg">
               <Image src="/svgs/email.svg" alt="" height={20} width={20} className="w-5 h-5 text-[#2B2A29]/70 hover:text-black" />
-              <p className="text-[#2B2A29]/70">engage.tapmiblr@manipal.edu</p>
+              <p className="text-[#2B2A29]/70">conference.tapmiblr@manipal.edu</p>
             </div>
           </div>
 

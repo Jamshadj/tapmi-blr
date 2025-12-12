@@ -3,13 +3,14 @@
 import { programOverview } from "@/src/data/programOverview";
 import { useState } from "react";
 
+
 export default function ProgramOverviewSection() {
   const [activeDay, setActiveDay] = useState<"dayOne" | "dayTwo">("dayOne");
 
   const data = activeDay === "dayOne" ? programOverview.dayOne : programOverview.dayTwo;
 
   return (
-    <section className="w-full py-8 md:py-20 bg-white">
+    <section id="schedule" className="w-full py-8 md:py-20 bg-white">
       <div className="max-w-full mx-auto px-8 md:px-16">
         
         {/* Heading */}
@@ -53,7 +54,7 @@ export default function ProgramOverviewSection() {
         </div>
 
         {/* Table Header */}
-        <div className="grid grid-cols-[110px_1fr] md:grid-cols-[300px_1fr] gap-x-6 md:gap-x-0 text-black border-t border-b border-black py-2 md:py-3 px-8 md:px-10 text-[14px] md:text-[18px] font-normal">
+        <div className="grid grid-cols-[110px_1fr] md:grid-cols-[300px_1fr] gap-x-6 md:gap-x-0 text-black border-t border-b border-black py-2 md:py-3 px-5 md:px-10 text-[14px] md:text-[18px] font-normal">
           <p className="md:px-20">Time</p>
           <p className="md:text-center">Activity</p>
         </div>
@@ -67,7 +68,7 @@ export default function ProgramOverviewSection() {
             return (
               <div
                 key={index}
-                className="grid grid-cols-[110px_1fr] md:grid-cols-[300px_1fr] gap-x-6 md:gap-x-0 py-3 md:py-4 px-8 md:px-10 text-[13px] md:text-[18px] leading-relaxed border-b border-gray-200 last:border-b-0"
+                className="grid grid-cols-[110px_1fr] md:grid-cols-[300px_1fr] gap-x-6 md:gap-x-0 py-3 md:py-4 px-3 md:px-10 text-[13px] md:text-[18px] leading-relaxed border-b border-gray-200 last:border-b-0"
               >
                 <div className="text-gray-800">
                   {/* Mobile: two lines, Desktop: one line */}

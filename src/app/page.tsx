@@ -8,8 +8,15 @@ import ObjectivesHighlightsSection from '../components/sections/ObjectivesHighli
 import AboutEventSection from '../components/sections/AboutEventSection'
 import HeroSection from '../components/sections/HeroSection'
 import KeynoteSection from '../components/sections/KeynoteSection'
+import { redirect } from "next/navigation";
 
-const page = () => {
+export const dynamic = "force-dynamic"; // optional, but safe
+
+
+ export default function page() {
+   // This runs on the server → Google sees proper HTML + all <head> tags
+  // redirect("/intersection-2026");
+
   return (
     <>
     <HeroSection/>
@@ -27,4 +34,3 @@ const page = () => {
   )
 }
 
-export default page

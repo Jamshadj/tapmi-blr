@@ -4,6 +4,7 @@ import Image from "next/image";
 import { objectives, eventHighlights } from "@/src/data/objectivesAndHighlights";
 import { useState, useEffect, useRef } from "react";
 
+
 export default function ObjectivesHighlightsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -124,6 +125,7 @@ export default function ObjectivesHighlightsSection() {
   const dragOffset = isDragging ? currentX - startX : 0;
   return (
     <section className="w-full font-sans bg-white">
+
 
       {/* ====================== OBJECTIVES ====================== */}
       <div className="max-w-full lg:px-15 mx-auto px-4 py-24">

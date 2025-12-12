@@ -1,8 +1,9 @@
 import { StyledMap } from "../ui/StyledMap";
 
+
 export default function EventVenueSection() {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section id="venue" className="relative w-full overflow-hidden">
 
       {/* FOR MOBILE: STACKED LAYOUT */}
       <div className="block md:hidden w-full">

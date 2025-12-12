@@ -2,9 +2,20 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { scroller } from "react-scroll";
+
 
 export default function HeroHeader() {
   const [open, setOpen] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    setOpen(false);
+    scroller.scrollTo(id, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
 
   return (
     <>
@@ -79,11 +90,11 @@ export default function HeroHeader() {
 
               {/* MENU ITEMS */}
               <ul className="space-y-8 text-2xl leading-relaxed">
-                <li className="cursor-pointer">Trajectories</li>
-                <li className="cursor-pointer">Important Dates</li>
-                <li className="cursor-pointer">Registration & Participation</li>
-                <li className="cursor-pointer">Schedule</li>
-                <li className="cursor-pointer">Venue</li>
+                <li onClick={() => scrollToSection("trajectories")} className="cursor-pointer">Trajectories</li>
+                <li onClick={() => scrollToSection("important-dates")} className="cursor-pointer">Important Dates</li>
+                <li onClick={() => scrollToSection("registration")} className="cursor-pointer">Registration & Participation</li>
+                <li onClick={() => scrollToSection("schedule")} className="cursor-pointer">Schedule</li>
+                <li onClick={() => scrollToSection("venue")} className="cursor-pointer">Venue</li>
               </ul>
 
               {/* BUTTON */}

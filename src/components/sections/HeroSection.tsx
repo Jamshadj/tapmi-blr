@@ -7,7 +7,8 @@ export default function HeroSection() {
       <HeroHeader />
 
       <div className="flex-1 w-full bg-gradient-to-r from-white via-[#bbedf7] to-[#B8EDF7] relative flex flex-col">
-        
+          
+
         {/* Main Content Container */}
         <div className="flex-1 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-15 flex items-center relative z-10">
           {/* LEFT CONTENT */}

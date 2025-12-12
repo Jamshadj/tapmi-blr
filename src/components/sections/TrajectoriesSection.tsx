@@ -124,7 +124,9 @@ export default function TrajectoriesSection() {
   const dragOffset = isDragging ? currentX - startX : 0;
 
   return (
-    <section className="w-full bg-[#1BA3B9] relative overflow-hidden font-sans">
+
+  <>
+  <section id="trajectories" className="w-full bg-[#1BA3B9] relative overflow-hidden font-sans trajectories ">
 {/*      
        <Image
     src="/svgs/vector1.svg"      // your actual file path
@@ -286,5 +288,7 @@ export default function TrajectoriesSection() {
         </div>
       </div>
     </section>
+    
+  </>
   );
 }

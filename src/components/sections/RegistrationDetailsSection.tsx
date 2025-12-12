@@ -7,11 +7,12 @@ import {
   participationContent,
 } from "@/src/data/registrationDetails";
 
+
 export default function RegistrationDetailsSection() {
   const [activeTab, setActiveTab] = useState("registration");
 
   return (
-    <section className="w-full py-8 md:py-16 bg-white font-sans">
+    <section id="registration" className="w-full py-8 md:py-16 bg-white font-sans">
       <div className="max-w-full mx-auto px-8 md:px-16">
         {/* Title */}
         <h2 className="text-[20px] md:text-[45px] font-medium text-left md:text-center mb-6 md:mb-12 text-black">
