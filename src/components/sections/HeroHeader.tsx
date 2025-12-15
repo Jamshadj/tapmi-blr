@@ -35,8 +35,9 @@ export default function HeroHeader() {
     <>
       {/* HEADER */}
       <header
-        className={`w-full py-3 fixed top-0 z-50 transition-all duration-300 md:static md:bg-white md:shadow-none ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
-          }`}
+        className={`w-full py-3 fixed top-0 z-50 transition-all duration-300 md:static md:bg-white md:shadow-none ${
+          isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
       >
         <div className=" px-4 md:px-15 flex justify-between items-center">
 
@@ -50,7 +51,7 @@ export default function HeroHeader() {
               className="object-contain w-32 h-12 md:w-auto md:h-auto"
             />
           </div>
-          <div className="mx-4 h-10 w-px bg-gray-300 md:hidden block" />          {/* RIGHT AREA */}
+<div className="mx-4 h-10 w-px bg-gray-300 md:hidden block" />          {/* RIGHT AREA */}
           <div className="flex items-center md:gap-4 gap-16 pr-1">
 
             {/* RIGHT LOGO */}
@@ -98,25 +99,25 @@ export default function HeroHeader() {
               transition={{ duration: 0.45, ease: "easeInOut" }} // smooth & slow
             >
               {/* CLOSE ICON */}
-              <div className="p-8 flex flex-col">
-                <button
-                  onClick={() => setOpen(false)}
-                  className="text-4xl font-light mb-10 self-end "
-                >
-                  ×
-                </button>
+           <div className="p-8 flex flex-col">
+               <button
+                onClick={() => setOpen(false)}
+                className="text-2xl font-light mb-10 self-end "
+              >
+                ×
+              </button>
 
-                {/* MENU ITEMS */}
-                <ul className="space-y-8 text-2xl leading-relaxed">
-                  <li onClick={() => scrollToSection("trajectories")} className="cursor-pointer">Trajectories</li>
-                  <li onClick={() => scrollToSection("important-dates")} className="cursor-pointer">Important Dates</li>
-                  <li onClick={() => scrollToSection("registration")} className="cursor-pointer">Registration & Participation</li>
-                  <li onClick={() => scrollToSection("schedule")} className="cursor-pointer">Schedule</li>
-                  <li onClick={() => scrollToSection("venue")} className="cursor-pointer">Venue</li>
-                </ul>
-              </div>
+              {/* MENU ITEMS */}
+              <ul className="space-y-8 text-2xl leading-relaxed">
+                <li onClick={() => scrollToSection("trajectories")} className="cursor-pointer">Trajectories</li>
+                <li onClick={() => scrollToSection("important-dates")} className="cursor-pointer">Important Dates</li>
+                <li onClick={() => scrollToSection("registration")} className="cursor-pointer">Registration & Participation</li>
+                <li onClick={() => scrollToSection("schedule")} className="cursor-pointer">Schedule</li>
+                <li onClick={() => scrollToSection("venue")} className="cursor-pointer">Venue</li>
+              </ul>
+           </div>
 
-
+           
               <div className="mt-auto mb-16 mx-8">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className="block w-full bg-white text-[#298A95] py-4 font-bold shadow text-center">
                   Submit Your Abstract
