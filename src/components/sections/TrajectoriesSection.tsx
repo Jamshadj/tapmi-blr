@@ -196,7 +196,7 @@ export default function TrajectoriesSection() {
       </div>
 
       {/* Mobile Layout - Slider */}
-      <div className="md:hidden px-4 py-12">
+      <div className="md:hidden px-8 py-12">
         {/* Heading */}
         <h2 className="text-white text-[28px] font-medium mb-4 tracking-tight leading-[1.2] px-2">
           Broad Area Trajectories for Presentation

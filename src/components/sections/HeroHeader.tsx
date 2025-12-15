@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { scroller } from "react-scroll";
@@ -7,6 +7,20 @@ import { scroller } from "react-scroll";
 
 export default function HeroHeader() {
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (id: string) => {
     setOpen(false);
@@ -20,8 +34,12 @@ export default function HeroHeader() {
   return (
     <>
       {/* HEADER */}
-      <header className="w-full bg-white py-3">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-8 flex justify-between items-center">
+      <header
+        className={`w-full py-3 fixed top-0 z-50 transition-all duration-300 md:static md:bg-white md:shadow-none ${
+          isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
+      >
+        <div className=" px-8 md:px-15 flex justify-between items-center">
 
           {/* LEFT LOGO */}
           <div className="flex items-center gap-4">
@@ -30,11 +48,11 @@ export default function HeroHeader() {
               alt="TAPMI Logo"
               width={180}
               height={80}
-              className="object-contain"
+              className="object-contain w-32 h-12 md:w-auto md:h-auto"
             />
           </div>
 <div className="mx-4 h-10 w-px bg-gray-300 md:hidden block" />          {/* RIGHT AREA */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center md:gap-4 gap-16">
 
             {/* RIGHT LOGO */}
             <Image
@@ -42,7 +60,7 @@ export default function HeroHeader() {
               alt="Deakin University Logo"
               width={140}
               height={50}
-              className="object-contain"
+              className="object-contain w-22 h-12 md:w-auto md:h-auto"
             />
 
             {/* HAMBURGER ICON */}
@@ -50,9 +68,9 @@ export default function HeroHeader() {
               onClick={() => setOpen(true)}
               className="flex flex-col gap-[6px] ml-3 cursor-pointer md:hidden block"
             >
-              <span className="w-7 h-[2px] bg-black"></span>
-              <span className="w-7 h-[2px] bg-black"></span>
-              <span className="w-7 h-[2px] bg-black"></span>
+              <span className="w-7 h-[2px] bg-[#1BA3B9]"></span>
+              <span className="w-7 h-[2px] bg-[#1BA3B9]"></span>
+              <span className="w-7 h-[2px] bg-[#1BA3B9]"></span>
             </button>
 
           </div>
@@ -99,7 +117,7 @@ export default function HeroHeader() {
 
               {/* BUTTON */}
               <div className="mt-auto mb-12 mx-auto">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className="w-full bg-white text-[#298A95] py-3 px-12  shadow">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className="w-full bg-white text-[#298A95] py-3 px-12 font-bold  shadow">
                   Submit Your Abstract
                 </a>
               </div>

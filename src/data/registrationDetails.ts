@@ -81,7 +81,7 @@ export const participationContent = {
       title: "Extended Abstract / Full Paper",
       description:
         "3000–5000 words, including literature review, methodology, results, and conclusions",
-      date: "1 Jan 2026",
+      date: "30 Jan 2026",
     },
   },
 };

@@ -12,12 +12,17 @@ export default function RegistrationDetailsSection() {
   const [activeTab, setActiveTab] = useState("registration");
 
   return (
-    <section id="registration" className="w-full py-8 md:py-16 bg-white font-sans">
-      <div className="max-w-full mx-auto px-8 md:px-16">
+    <section id="registration" className="w-full py-16 bg-white font-sans text-black">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-15">
+        
         {/* Title */}
-        <h2 className="text-[20px] md:text-[45px] font-medium text-left md:text-center mb-6 md:mb-12 text-black">
-          Registration & Participation Details
-        </h2>
+        <div className="mb-0">
+          <h2 className="text-[32px] md:text-[45px] font-medium text-left leading-tight text-black mb-6">
+            Registration & <br className="md:hidden" />
+            Participation Details
+          </h2>
+        
+        </div>
 
         {/* Tabs */}
         <div className="flex justify-center gap-6 md:gap-48 mb-6 md:mb-12 relative border-b-2 border-[#C8C8C8] md:border-t-2 py-4 md:py-6">
@@ -25,10 +30,10 @@ export default function RegistrationDetailsSection() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`pb-2 text-[14px] md:text-[18px] font-semibold relative z-10 transition-colors ${
+              className={`text-[16px] md:text-[18px] font-medium relative transition-colors ${
                 activeTab === tab.id
-                  ? "text-black border-b-[3px] border-[#0EA5A9]"
-                  : "text-gray-500 hover:text-gray-700"
+                  ? "text-black border-b-[3px] border-[#1BA3B9] pb-1"
+                  : "text-black hover:text-[#1BA3B9] transition-all pb-1"
               }`}
             >
               {tab.label}
@@ -39,77 +44,73 @@ export default function RegistrationDetailsSection() {
         {/* Registration Details Table */}
         {activeTab === "registration" && (
           <div className="w-full">
-            {/* Table Header - Hidden on mobile */}
-            <div className="hidden md:grid grid-cols-[2fr_1fr_1fr] pb-4 mb-0 px-6 border-b-2 border-[#1BA3B9]">
-              {registrationTable.headings.map((h, i) => (
-                <p
-                  key={i}
-                  className={`text-[18px] font-medium text-gray-800 ${
-                    i === 0 ? "text-left" : "text-right"
-                  }`}
-                >
-                  {h}
-                </p>
-              ))}
+            {/* Table Header */}
+            <div className=" flex items-center justify-center gap-6 md:gap-0  md:grid grid-cols-[1.5fr_1fr_1fr] pb-4 mb-2">
+              <p className="md:text-[18px] text-[16px] font-normal text-black text-left">
+                {registrationTable.headings[0]}
+              </p>
+              <p className="md:text-[18px] text-[16px] font-normal text-black text-center">
+                {registrationTable.headings[1]}
+              </p>
+              <p className="md:text-[18px] text-[16px] font-normal text-black text-center">
+                {registrationTable.headings[2]}
+              </p>
             </div>
+            {/* Divider under headers */}
+            {/* <hr className="border-t border-[#1BA3B9] w-full mb-0" />  -- Removed per image observation, strictly following section borders */}
 
             {/* Table Body */}
             {registrationTable.rows.map((row, idx) => {
               const isExtended = row.section.includes("Extended");
 
               return (
-                <div key={idx}>
-                  {/* Section Title or Special Row */}
-                  {!isExtended ? (
-                    <>
-                      <div className="py-3 md:py-4 border-b-2 border-[#1BA3B9] px-4 md:px-8">
-                        <p className="text-[16px] md:text-[18px] font-semibold text-black">
-                          {row.section}
-                        </p>
-                      </div>
-                      {/* Rows */}
-                      {row.items.map((item, i) => (
-                        <div
-                          key={i}
-                          className="flex flex-col md:grid md:grid-cols-[2fr_1fr_1fr] py-3 md:py-4 border-b-2 border-[#1BA3B9] px-4 md:px-8 gap-2 md:gap-0"
-                        >
-                          <p className="text-[14px] md:text-[18px] text-gray-700 font-normal">
-                            {item.label}
-                          </p>
-                          <div className="flex justify-between md:contents">
-                            <p className="text-[14px] md:text-[18px] text-gray-700 md:text-right">
-                              <span className="md:hidden font-medium">Ph.D Scholars: </span>
-                              {item.phd}
-                            </p>
-                            <p className="text-[14px] md:text-[18px] text-gray-700 md:text-right">
-                              <span className="md:hidden font-medium">Early Career: </span>
-                              {item.aca}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                    </>
-                  ) : (
-                    /* Special Case for Extended Abstract which is a single row with bold title */
-                    <div className="flex flex-col md:grid md:grid-cols-[2fr_1fr_1fr] py-3 md:py-4 border-b-2 border-[#1BA3B9] px-4 md:px-8 gap-2 md:gap-0">
-                      <p className="text-[16px] md:text-[18px] font-semibold text-black">
-                        {row.section}
+                <div key={idx} className="mb-0">
+                  {/* Section Title */}
+                  <div className="py-4 border-t border-b border-[#1BA3B9] w-full mt-4 mb-4">
+                     <p className="text-[16px] md:text-[18px] font-bold text-black text-center md:text-start">
+                        {isExtended ? (
+                             <>
+                                {row.section.replace("*", "")}
+                                <span className="text-[#1BA3B9]">*</span>
+                             </>
+                        ) : (
+                            row.section
+                        )}
                       </p>
-                      <div className="flex justify-between md:contents">
-                        <p className="text-[14px] md:text-[18px] text-gray-700 md:text-right">
-                          {row.items[0].phd}
+                  </div>
+
+                  {/* Rows */}
+                  {row.items.map((item, i) => (
+                    <div
+                      key={i}
+                      className="flex flex-col md:grid md:grid-cols-[1.5fr_1fr_1fr] py-4 items-center"
+                    >
+                      {/* Label - Hide for extended abstract special row if needed, but design implies empty space or specific layout. 
+                          For normal rows: Left Aligned. 
+                          For Extended: The image shows empty first col. */}
+                       <p className={` md:block hidden text-[16px] md:text-[18px] text-black font-normal ${isExtended ? 'hidden md:block md:invisible' : 'text-left'}`}>
+                          {item.label}
                         </p>
-                        <p className="text-[14px] md:text-[18px] text-gray-700 md:text-right">
-                          {row.items[0].aca}
+                      
+                    
+
+                      {/* Early Career Data */}
+                      <div className="grid grid-cols-3 w-full md:w-auto md:contents">
+                         <span className="md:hidden text-[18px] font-medium text-gray-700 text-center"> {item.label}</span>
+                        <p className="text-[16px] md:text-[18px] text-black text-center">
+                          {item.phd}
+                        </p>
+                        <p className="text-[16px] md:text-[18px] text-black text-center">
+                          {item.aca}
                         </p>
                       </div>
                     </div>
-                  )}
+                  ))}
 
                   {/* Footnote */}
                   {row.footnote && (
-                       <p className="mt-3 md:mt-4 text-[12px] md:text-[16px] text-black font-normal px-4 md:px-8">
-                       <span className="text-[#1BA3B9]">*</span>  {row.footnote}
+                    <p className="mt-8 text-[14px] md:text-[16px] text-black font-normal text-left">
+                      <span className="text-[#1BA3B9]">*</span> {row.footnote}
                     </p>
                   )}
                 </div>
@@ -118,68 +119,84 @@ export default function RegistrationDetailsSection() {
           </div>
         )}
 
-        {/* Participation Details */}
+        {/* Participation Details - Kept mostly same but ensuring structure aligns if needed */}
         {activeTab === "participation" && (
-          <div className="w-full">
-            <div className="space-y-6 md:space-y-8 mb-6 md:mb-10">
+          <div className="w-full pt-4">
+             {/* Reusing similar typography for consistency */}
+            <div className="space-y-8 mb-10">
               <div>
-                <p className="text-[16px] md:text-[20px] font-semibold text-black mb-1">Eligibility</p>
-                <p className="text-[14px] md:text-[18px] text-gray-700 leading-relaxed">
+                <p className="text-[20px] font-semibold text-black mb-2">Eligibility</p>
+                <p className="text-[18px] text-gray-700 leading-relaxed">
                   {participationContent.eligibility}
                 </p>
               </div>
 
               <div>
-                <p className="text-[16px] md:text-[20px] font-semibold text-black mb-1">Accommodation</p>
-                <p className="text-[14px] md:text-[18px] text-gray-700 leading-relaxed">
+                <p className="text-[20px] font-semibold text-black mb-2">Accommodation</p>
+                <p className="text-[18px] text-gray-700 leading-relaxed">
                   {participationContent.accommodation}
                 </p>
               </div>
 
               <div>
-                <p className="text-[16px] md:text-[20px] font-semibold text-black mb-1">Travel</p>
-                <p className="text-[14px] md:text-[18px] text-gray-700 leading-relaxed">
+                <p className="text-[20px] font-semibold text-black mb-2">Travel</p>
+                <p className="text-[18px] text-gray-700 leading-relaxed">
                   {participationContent.travel}
                 </p>
               </div>
             </div>
 
             {/* Teal Box */}
-            <div className="bg-[#1BA3B9] text-white p-5 md:px-8 md:py-10 rounded-none shadow-sm">
-              <p className="text-[16px] md:text-[20px] font-semibold mb-5 md:mb-8">Submission Deadlines</p>
+           {/* Teal Box */}
+<div className="bg-[#1BA3B9] text-white p-6 md:p-10">
+  {/* Title */}
+  <p className="text-[24px] font-semibold mb-10">
+    Submission Deadlines
+  </p>
 
-              <div className="space-y-5 md:space-y-8">
-                {/* Abstract */}
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-8">
-                  <div className="flex-1">
-                    <p className="text-[15px] md:text-[22px] font-semibold mb-2">
-                      {participationContent.submissionBox.abstract.title}
-                    </p>
-                    <p className="text-[13px] md:text-[18px] leading-relaxed opacity-90">
-                      {participationContent.submissionBox.abstract.description}
-                    </p>
-                  </div>
-                  <p className="text-[13px] md:text-[18px] font-normal md:whitespace-nowrap mt-1 md:mt-0">
-                    {participationContent.submissionBox.abstract.date}
-                  </p>
-                </div>
+  <div className="space-y-10">
+    {/* Abstract */}
+    <div className="flex justify-between items-start gap-8">
+      <div className="max-w-[75%]">
+        <p className="text-[20px] font-semibold md:mb-3">
+          Abstract
+        </p>
+        <p className="text-[18px] hidden md:block  leading-[28px] opacity-90">
+          500–600 words, highlighting research gap, objectives,
+          methodology, key findings, and contributions
+        </p>
+      </div>
 
-                {/* Extended Abstract */}
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-8">
-                  <div className="flex-1">
-                    <p className="text-[15px] md:text-[22px] font-semibold mb-2">
-                      {participationContent.submissionBox.extended.title}
-                    </p>
-                    <p className="text-[13px] md:text-[18px] leading-relaxed opacity-90">
-                      {participationContent.submissionBox.extended.description}
-                    </p>
-                  </div>
-                  <p className="text-[13px] md:text-[18px] font-normal md:whitespace-nowrap mt-1 md:mt-0">
-                    {participationContent.submissionBox.extended.date}
-                  </p>
-                </div>
-              </div>
-            </div>
+      <p className="text-[18px] font-normal whitespace-nowrap pt-[2px]">
+        15 / 30 Dec 2025
+      </p>
+    </div>
+ <p className="text-[18px] leading-[28px] -mt-6 md:hidden block opacity-90">
+          500–600 words, highlighting research gap, objectives,
+          methodology, key findings, and contributions
+        </p>
+    {/* Extended Abstract */}
+    <div className="flex justify-between items-start gap-8">
+      <div className="max-w-[75%]">
+        <p className="text-[20px] font-semibold mb-3">
+          Extended Abstract<br />/ Full Paper
+        </p>
+        <p className="text-[18px] hidden md:block leading-[28px] opacity-90">
+          3000–5000 words, including literature review,
+          methodology, results, and conclusions
+        </p>
+      </div>
+
+      <p className="text-[18px] font-normal whitespace-nowrap pt-[2px]">
+        1 Jan 2026
+      </p>
+    </div>
+    <p className="text-[18px] -mt-6 leading-[28px] md:hidden block opacity-90">
+      3000–5000 words, including literature review,
+      methodology, results, and conclusions
+    </p>
+  </div>
+</div>
           </div>
         )}
       </div>

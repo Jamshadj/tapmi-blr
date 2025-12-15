@@ -52,7 +52,7 @@
     return (
       <div className="w-full py-16 bg-white">
 
-        <div className="max-w-7xl mx-auto px-6 md:px-4">
+        <div className="max-w-7xl mx-auto px-8 md:px-4">
           {/* KEYNOTE SPEAKERS */}
           <h2 className="text-center  text-[32px] md:text-[44px] font-medium mb-8">
             Keynote Speakers
@@ -90,7 +90,7 @@
 
       {/* Close Button */}
       <button
-        className="absolute right-6 top-6 z-10 text-sky-600 transition hover:text-sky-700"
+        className="absolute right-6 top-6 z-10 text-[#2E8E9E] transition hover:text-[#72bfcd]"
         onClick={closeModal}
       >
         <X size={26} strokeWidth={2.2} />
@@ -100,17 +100,17 @@
       <div className="flex-1 overflow-y-auto hide-scrollbar px-5 py-6 md:px-10 md:py-10">
         {/* Top row: image left, name/titles right */}
         <div className="flex flex-col gap-4 md:flex-row md:gap-1">
-          <div className="w-auto md:w-[240px] shrink-0">
+          <div className="w-auto md:w-[260px] shrink-0">
             <Image
               src={selected.image}
               width={190}
               height={190}
-              className="shrink-0 w-[160px] h-[200px] md:w-[190px] md:h-[190px] object-cover border border-gray-200"
+              className="shrink-0 w-[160px] h-[200px] md:w-[210px] md:h-[250px] object-cover border border-gray-200"
               alt={selected.name}
             />
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 md:mt-8 mt-0">
             {/* Name */}
             <h3 className="text-[26px] font-medium leading-snug text-gray-900">
               {selected.name}
@@ -162,7 +162,7 @@
             Become a part of Intersection 2026
           </h4>
 
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className=" bg-white px-6 py-2.5 text-[15px] font-medium text-[#356268] shadow-sm transition hover:bg-gray-100">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className=" bg-white px-6 py-2.5 text-[15px] font-bold text-[#2E8E9E] shadow-sm transition hover:bg-gray-100">
             Submit Your Abstract
           </a>
         </div>
@@ -184,7 +184,7 @@
   src={sp.image}
   width={300}
   height={300}
-  className="object-cover w-full aspect-square mb-3"
+  className="object-cover w-full a mb-3"
 />
         
         <div className="text-left">

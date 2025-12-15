@@ -5,7 +5,7 @@ import HeroHeader from "./HeroHeader";
 
 export default function HeroSection() {
   return (
-    <section className="w-full h-[100vh] flex flex-col overflow-hidden">
+    <section className="w-full h-[92vh]  flex flex-col overflow-hidden">
       <HeroHeader />
 
       <div className="flex-1 w-full bg-gradient-to-r from-white via-[#bbedf7] to-[#B8EDF7] relative flex flex-col">
@@ -14,24 +14,24 @@ export default function HeroSection() {
         {/* Main Content Container */}
         <div className="flex-1 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-15 flex items-center relative z-10">
           {/* LEFT CONTENT */}
-          <div className="w-full lg:w-[55%] py-4 -mt-28 md:mt-0 sm:py-6 lg:py-8">
-            <p className="text-[18px] sm:text-[24px] lg:text-[32px] text-[#1E9BB0] font-normal">
+          <div className="w-full lg:w-[55%] py-2 -mt-38 md:mt-0 sm:py-6 lg:py-3">
+            <p className="text-[18px] sm:text-[24px] lg:text-[28px] text-[#1E9BB0] font-normal">
               Intersection 2026
             </p>
 
-            <h1 className="text-[28px] sm:text-[38px] lg:text-[82px] leading-[1.2] sm:leading-[1.2] lg:leading-[90px] font-bold text-[#1E9BB0] mb-3 sm:mb-4  decoration-4 ">
+            <h1 className="text-[28px] sm:text-[38px] lg:text-[72px] leading-[1.2] sm:leading-[1.2] lg:leading-[72px] font-bold text-[#1E9BB0] mb-3 sm:mb-4  decoration-4 ">
               Navigating the<br />
               New Global Order
             </h1>
 
-            <p className="text-[20px] sm:text-[18px] lg:text-[26px] text-[#000000CC] mb-4 sm:mb-5 lg:mb-6">
+            <p className="text-[20px] sm:text-[18px] lg:text-[24px] text-[#000000CC] mb-4 sm:mb-5 lg:mb-6">
               PhD Colloquium on Management,<br />
               Social Sciences, and Humanities
             </p>
 
             <button   onClick={() => {
     window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1"
-  }} className="bg-[#1E9BB0] hover:bg-[#1a8a9d] transition text-white px-3 sm:px-4 py-2 sm:py-3 text-[12px] sm:text-[17px] font-medium mb-4 sm:mb-6 lg:mb-8 hidden md:block">
+  }} className="bg-[#1E9BB0] hover:bg-[#1a8a9d] transition text-white px-3 sm:px-4 py-3 sm:py-3 text-[12px] sm:text-[17px] font-bold mt-2 sm:mb-6 lg:mb-8 ">
               Submit Your Abstract
             </button>
 

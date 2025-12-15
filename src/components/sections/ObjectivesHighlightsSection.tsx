@@ -128,7 +128,7 @@ export default function ObjectivesHighlightsSection() {
 
 
       {/* ====================== OBJECTIVES ====================== */}
-      <div className="max-w-full lg:px-15 mx-auto px-4 py-24">
+      <div className="max-w-full lg:px-15 mx-auto px-8 py-24">
         
         {/* Title */}
         <h2 className="text-center text-5xl font-medium mb-16 text-black">
@@ -237,7 +237,7 @@ export default function ObjectivesHighlightsSection() {
         </h2>
 
         {/* 3 Cards */}
-        <div className="max-w-full  mx-auto  grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-14">
+        <div className="max-w-[1400px] mx-auto px-1 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-14">
           {eventHighlights.map((item) => (
             <div
               key={item.id}

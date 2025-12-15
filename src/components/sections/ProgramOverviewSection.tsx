@@ -29,7 +29,7 @@ export default function ProgramOverviewSection() {
             {activeDay === "dayOne" ? "Day One" : "Day Two"}
           </span>
 
-          <div className="relative flex p-1 bg-gray-100 rounded-full border border-gray-200 w-[200px] md:w-54">
+          <div className="relative flex p-1 bg-gray-100 rounded-full border border-gray-200 w-[200px] md:w-54.5">
             <div
               className={`absolute top-1 bottom-1 left-1 w-[95px] md:w-26 rounded-full bg-[#0EA5A9] transition-transform duration-300 ease-in-out ${
                 activeDay === "dayTwo" ? "translate-x-full" : "translate-x-0"

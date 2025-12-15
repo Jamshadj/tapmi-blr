@@ -3,7 +3,7 @@ import { importantDates } from "@/src/data/importantDates";
 export default function ImportantDatesSection() {
   return (
     <section id="important-dates" className="w-full h-auto md:h-[70vh] bg-[#1BA3B9] py-12 md:py-18 important-dates ">
-      <div className="w-full max-w-full mx-auto px-8 md:px-16  ">
+      <div className=" mx-auto px-8 md:px-0 max-w-[1400px] ">
 
         {/* Heading */}
         <h2 className="text-white text-[26px] md:text-[45px] font-normal mb-8 md:mb-7 leading-tight">

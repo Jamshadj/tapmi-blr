@@ -5,7 +5,7 @@ export default function AboutEventSection() {
   return (
     <section className="w-full bg-white py-20">
 
-      <div className="max-w-full mx-auto px-4 lg:px-15 grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="max-w-full mx-auto px-8 lg:px-15 grid grid-cols-1 lg:grid-cols-2 gap-12">
         
         {/* LEFT TEXT BLOCK */}
         <div className="flex flex-col justify-center">
