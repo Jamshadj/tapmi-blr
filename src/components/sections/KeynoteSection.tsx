@@ -180,7 +180,7 @@ export default function KeynoteSection() {
                     Become a part of Intersection 2026
                   </h4>
 
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className=" bg-white px-6 py-2.5 text-[15px] font-bold text-[#2E8E9E] shadow-sm transition hover:bg-gray-100">
+                  <a href="https://forms.gle/y9h7p1ZebvSE3GFg9" className=" bg-white px-6 py-2.5 text-[15px] font-bold text-[#2E8E9E] shadow-sm transition hover:bg-gray-100">
                     Submit Your Abstract
                   </a>
                 </div>
