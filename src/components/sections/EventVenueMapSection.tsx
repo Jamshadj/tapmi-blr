@@ -38,14 +38,13 @@ export default function EventVenueSection() {
 
         {/* MOBILE MAP BELOW CARD */}
         <div className="w-full h-[300px]">
-             <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.396704145389!2d74.80111607482469!3d13.32558140701921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbca4c28c480c85%3A0x476bedd2ab43efd2!2sT.%20A.%20Pai%20Management%20Institute%20(TAPMI)!5e0!3m2!1sen!2sin!4v1764563431662!5m2!1sen!2sin"
-          width={2000}
-          height={1000}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.396704145389!2d74.80111607482469!3d13.32558140701921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbca4c28c480c85%3A0x476bedd2ab43efd2!2sT.%20A.%20Pai%20Management%20Institute%20(TAPMI)!5e0!3m2!1sen!2sin!4v1764563431662!5m2!1sen!2sin"
+            className="w-full h-full border-0"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
 

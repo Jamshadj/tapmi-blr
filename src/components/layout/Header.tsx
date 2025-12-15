@@ -8,7 +8,7 @@ import { scroller } from "react-scroll";
 export default function PageNavHeader() {
   const [open, setOpen] = useState(false);
 
-    const scrollToSection = (id: string) => {
+  const scrollToSection = (id: string) => {
     setOpen(false);
     scroller.scrollTo(id, {
       duration: 800,
@@ -17,7 +17,7 @@ export default function PageNavHeader() {
     });
   };
 
- 
+
   return (
     <header className="hidden md:block w-full bg-[#1B9AAA] relative z-50">
 
@@ -36,14 +36,14 @@ export default function PageNavHeader() {
             text-[14px]
           "
         >
-          <a  onClick={() => scrollToSection("trajectories")}   className="hover:opacity-80 transition">Trajectories</a>
-          <a onClick={() => scrollToSection("important-dates")}  href="#important-dates" className="hover:opacity-80 transition">Important Dates</a>
+          <a onClick={() => scrollToSection("trajectories")} className="hover:opacity-80 transition">Trajectories</a>
+          <a onClick={() => scrollToSection("important-dates")} href="#important-dates" className="hover:opacity-80 transition">Important Dates</a>
           <a onClick={() => scrollToSection("registration")} href="#registration" className="hover:opacity-80 transition">Registration & Participation</a>
           <a onClick={() => scrollToSection("schedule")} href="#schedule" className="hover:opacity-80 transition">Schedule</a>
           <a onClick={() => scrollToSection("venue")} href="#venue" className="hover:opacity-80 transition">Venue</a>
-<a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1"
-  className="
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1"
+            className="
     h-[66px]
     px-4
     flex items-center
@@ -52,9 +52,9 @@ export default function PageNavHeader() {
     hover:bg-white
     hover:text-[#1E9BB0]
   "
->
-  Submit Your Abstract
-</a>        </div>
+          >
+            Submit Your Abstractff
+          </a>        </div>
       </nav>
 
 
@@ -73,9 +73,8 @@ export default function PageNavHeader() {
 
       {/* SIDEBAR OVERLAY */}
       <div
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setOpen(false)}
       ></div>
 
@@ -104,8 +103,8 @@ export default function PageNavHeader() {
           <a href="#registration" onClick={() => setOpen(false)}>Registration & Participation</a>
           <a href="#schedule" onClick={() => setOpen(false)}>Schedule</a>
           <a href="#venue" onClick={() => setOpen(false)}>Venue</a>
-          <a  href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className="font-bold w-[65px]" onClick={() => setOpen(false)}>
-            Submit Your Abstract
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1" className="font-bold w-[65px]" onClick={() => setOpen(false)}>
+            Submit Your Abstractdd
           </a>
         </nav>
       </div>

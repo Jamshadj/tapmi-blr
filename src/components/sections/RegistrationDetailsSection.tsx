@@ -14,14 +14,14 @@ export default function RegistrationDetailsSection() {
   return (
     <section id="registration" className="w-full py-16 bg-white font-sans text-black">
       <div className=" mx-auto px-8 sm:px-6 lg:px-15">
-        
+
         {/* Title */}
         <div className="mb-0">
           <h2 className="text-[32px] md:text-[45px] font-medium text-left leading-tight text-black mb-6">
             Registration & <br className="md:hidden" />
             Participation Details
           </h2>
-        
+
         </div>
 
         {/* Tabs */}
@@ -30,11 +30,10 @@ export default function RegistrationDetailsSection() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`text-[16px] md:text-[18px] font-medium relative transition-colors ${
-                activeTab === tab.id
+              className={`text-[16px] md:text-[18px] font-medium relative transition-colors ${activeTab === tab.id
                   ? "text-black border-b-[3px] border-[#1BA3B9] pb-1"
                   : "text-black hover:text-[#1BA3B9] transition-all pb-1"
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -67,16 +66,16 @@ export default function RegistrationDetailsSection() {
                 <div key={idx} className="mb-0">
                   {/* Section Title */}
                   <div className="py-4 border-t border-b border-[#1BA3B9] w-full mt-4 mb-4">
-                     <p className="text-[16px] md:text-[18px] font-bold text-black text-center md:text-start">
-                        {isExtended ? (
-                             <>
-                                {row.section.replace("*", "")}
-                                <span className="text-[#1BA3B9]">*</span>
-                             </>
-                        ) : (
-                            row.section
-                        )}
-                      </p>
+                    <p className="text-[16px] md:text-[18px] font-bold text-black text-center md:text-start">
+                      {isExtended ? (
+                        <>
+                          {row.section.replace("*", "")}
+                          <span className="text-[#1BA3B9]">*</span>
+                        </>
+                      ) : (
+                        row.section
+                      )}
+                    </p>
                   </div>
 
                   {/* Rows */}
@@ -88,15 +87,15 @@ export default function RegistrationDetailsSection() {
                       {/* Label - Hide for extended abstract special row if needed, but design implies empty space or specific layout. 
                           For normal rows: Left Aligned. 
                           For Extended: The image shows empty first col. */}
-                       <p className={` md:block hidden text-[16px] md:text-[18px] text-black font-normal ${isExtended ? 'hidden md:block md:invisible' : 'text-left'}`}>
-                          {item.label}
-                        </p>
-                      
-                    
+                      <p className={` md:block hidden text-[16px] md:text-[18px] text-black font-normal ${isExtended ? 'hidden md:block md:invisible' : 'text-left'}`}>
+                        {item.label}
+                      </p>
+
+
 
                       {/* Early Career Data */}
                       <div className="grid grid-cols-3 w-full md:w-auto md:contents">
-                         <span className="md:hidden text-[18px] font-medium text-gray-700 md:text-center text-start"> {item.label}</span>
+                        <span className="md:hidden text-[18px] font-medium text-gray-700 md:text-center text-start"> {item.label}</span>
                         <p className="text-[16px] md:text-[18px] text-black text-center">
                           {item.phd}
                         </p>
@@ -122,7 +121,7 @@ export default function RegistrationDetailsSection() {
         {/* Participation Details - Kept mostly same but ensuring structure aligns if needed */}
         {activeTab === "participation" && (
           <div className="w-full pt-4">
-             {/* Reusing similar typography for consistency */}
+            {/* Reusing similar typography for consistency */}
             <div className="space-y-8 mb-10">
               <div>
                 <p className="text-[20px] font-semibold text-black mb-2">Eligibility</p>
@@ -147,56 +146,56 @@ export default function RegistrationDetailsSection() {
             </div>
 
             {/* Teal Box */}
-           {/* Teal Box */}
-<div className="bg-[#1BA3B9] text-white p-6 md:p-10">
-  {/* Title */}
-  <p className="text-[24px] font-semibold mb-10">
-    Submission Deadlines
-  </p>
+            {/* Teal Box */}
+            <div className="bg-[#1BA3B9] text-white p-6 md:p-10">
+              {/* Title */}
+              <p className="text-[24px] font-semibold mb-10">
+                Submission Deadlines
+              </p>
 
-  <div className="space-y-10">
-    {/* Abstract */}
-    <div className="flex justify-between items-start gap-8">
-      <div className="max-w-[75%]">
-        <p className="text-[20px] font-semibold md:mb-3">
-          Abstract
-        </p>
-        <p className="text-[18px] hidden md:block  leading-[28px] opacity-90">
-          500–600 words, highlighting research gap, objectives,
-          methodology, key findings, and contributions
-        </p>
-      </div>
+              <div className="space-y-10">
+                {/* Abstract */}
+                <div className="flex justify-between items-start gap-8">
+                  <div className="max-w-[75%]">
+                    <p className="text-[20px] font-semibold md:mb-3">
+                      Abstract
+                    </p>
+                    <p className="text-[18px] hidden md:block  leading-[28px] opacity-90">
+                      500–600 words, highlighting research gap, objectives,
+                      methodology, key findings, and contributions
+                    </p>
+                  </div>
 
-      <p className="text-[18px] font-normal whitespace-nowrap pt-[2px]">
-        15 / 30 Dec 2025
-      </p>
-    </div>
- <p className="text-[18px] leading-[28px] -mt-6 md:hidden block opacity-90">
-          500–600 words, highlighting research gap, objectives,
-          methodology, key findings, and contributions
-        </p>
-    {/* Extended Abstract */}
-    <div className="flex justify-between items-start gap-8">
-      <div className="max-w-[75%]">
-        <p className="text-[20px] font-semibold mb-3">
-          Extended Abstract<br />/ Full Paper
-        </p>
-        <p className="text-[18px] hidden md:block leading-[28px] opacity-90">
-          3000–5000 words, including literature review,
-          methodology, results, and conclusions
-        </p>
-      </div>
+                  <p className="text-[18px] font-normal whitespace-nowrap pt-[2px]">
+                    15 / 30 Dec 2025
+                  </p>
+                </div>
+                <p className="text-[18px] leading-[28px] -mt-6 md:hidden block opacity-90">
+                  500–600 words, highlighting research gap, objectives,
+                  methodology, key findings, and contributions
+                </p>
+                {/* Extended Abstract */}
+                <div className="flex justify-between items-start gap-8">
+                  <div className="max-w-[75%]">
+                    <p className="text-[20px] font-semibold mb-3">
+                      Extended Abstract<br />/ Full Paper
+                    </p>
+                    <p className="text-[18px] hidden md:block leading-[28px] opacity-90">
+                      3000–5000 words, including literature review,
+                      methodology, results, and conclusions
+                    </p>
+                  </div>
 
-      <p className="text-[18px] font-normal whitespace-nowrap pt-[2px]">
-        1 Jan 2026
-      </p>
-    </div>
-    <p className="text-[18px] -mt-6 leading-[28px] md:hidden block opacity-90">
-      3000–5000 words, including literature review,
-      methodology, results, and conclusions
-    </p>
-  </div>
-</div>
+                  <p className="text-[18px] font-normal whitespace-nowrap pt-[2px]">
+                    30 Jan 2026
+                  </p>
+                </div>
+                <p className="text-[18px] -mt-6 leading-[28px] md:hidden block opacity-90">
+                  3000–5000 words, including literature review,
+                  methodology, results, and conclusions
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </div>

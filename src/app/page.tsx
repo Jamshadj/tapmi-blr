@@ -13,23 +13,23 @@ import { redirect } from "next/navigation";
 export const dynamic = "force-dynamic"; // optional, but safe
 
 
- export default function page() {
-   // This runs on the server → Google sees proper HTML + all <head> tags
+export default function page() {
+  // This runs on the server → Google sees proper HTML + all <head> tags
   // redirect("/intersection-2026");
 
   return (
     <>
-    <HeroSection/>
-    <AboutEventSection/>
-    
-    <ObjectivesHighlightsSection/>
-    <KeynoteSection/>
-    <TrajectoriesSection/>
-<RegistrationDetailsSection/>
-    <ImportantDatesSection/>
-    <ProgramOverviewSection/>
-    <EventVenueMapSection/>
-    
+      <HeroSection />
+      <AboutEventSection />
+
+      <ObjectivesHighlightsSection />
+      <KeynoteSection />
+      <TrajectoriesSection />
+      <RegistrationDetailsSection />
+      <ImportantDatesSection />
+      <ProgramOverviewSection />
+      <EventVenueMapSection />
+
     </>
   )
 }
