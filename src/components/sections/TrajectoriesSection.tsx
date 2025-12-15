@@ -231,7 +231,7 @@ export default function TrajectoriesSection() {
                     key={item.id}
                     className="w-full flex-shrink-0 px-2"
                   >
-                    <div className="min-h-[85vw] h-auto bg-white p-6 py-10 shadow-sm flex flex-col">
+                    <div className="lg:h-[380px] h-[430px] bg-white p-6 py-10 shadow-sm flex flex-col overflow-hidden">
                       {/* Icon */}
                       <div className="mb-5">
                         <Image

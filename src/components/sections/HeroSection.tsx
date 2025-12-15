@@ -31,7 +31,7 @@ export default function HeroSection() {
 
             <button onClick={() => {
               window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSd_wmYFez7rMTnQmEjw7fnkkS-5y0on5-hKWd8AoLlIJ0T6kg/viewform?pli=1"
-            }} className="bg-[#1E9BB0] hover:bg-[#1a8a9d] transition text-white px-3 sm:px-4 py-3 sm:py-3 text-[12px] sm:text-[17px] font-bold mt-2 sm:mb-6 lg:mb-8 ">
+            }} className="bg-[#1E9BB0] hover:bg-[#1a8a9d] transition text-white px-3 sm:px-4 py-3 sm:py-3 text-[17px] font-bold mt-2 sm:mb-6 lg:mb-8 ">
               Submit Your Abstract
             </button>
 
