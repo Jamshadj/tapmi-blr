@@ -137,9 +137,9 @@ export default function KeynoteSection() {
                     {/* Titles exactly like screenshot */}
                     <p className="mt-2 text-[18px] leading-relaxed text-gray-800 whitespace-pre-line">
                       {selected.title}
-                      {`selected.subtitle && \n${selected.subtitle}`}
-                      {`selected.subtitle2 && \n${selected.subtitle2}`}
-                      {`selected.subtitle3 && \n${selected.subtitle3}`}
+                      {selected.subtitle && `\n${selected.subtitle}`}
+                      {selected.subtitle2 && `\n${selected.subtitle2}`}
+                      {selected.subtitle3 && `\n${selected.subtitle3}`}
                     </p>
                   </div>
                 </div>
@@ -219,3 +219,4 @@ function SpeakerCard({ sp, onClick }: { sp: Speaker; onClick: () => void }) {
     </div>
   );
 }
+
