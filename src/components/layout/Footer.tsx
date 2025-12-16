@@ -20,11 +20,12 @@ export default function Footer() {
 
         {/* Address */}
         <p className="text-[16px] text-gray-800 mt-6 leading-relaxed">
-          Manipal Academy of Higher Education,
+          Manipal Academy of Higher Education (MAHE), Bengaluru Campus,
           <br />
-          Thanisandra Main Rd, Chokkanahalli,
-          <br className="block md:hidden" />
-          Bengaluru, Karnataka 560064
+          (Institution of Eminence Deemed to be University)
+
+          <br className="" />
+          Govindapura, Yelahanka, Bengaluru 560063, Karnataka, India
         </p>
 
         {/* Divider */}
