@@ -23,7 +23,7 @@ const speakers: SpeakersData = {
   keynoteSpeakers: [
     {
       id: 1,
-      name: "Prof. Dr. Madhu Veeraraghavan",
+      name: "Prof. Madhu Veeraraghavan",
       title: "Pro Vice Chancellor [MAHE, BLR]",
       subtitle: "Pro Vice Chancellor [Management, Law, Humanities and Social Sciences]",
       image: "/images/speakers/madhu.png",
@@ -33,7 +33,7 @@ const speakers: SpeakersData = {
     },
     {
       id: 2,
-      name: "Prof. Dr. Colin Higgins",
+      name: "Prof. Colin Higgins",
       title: "Deputy Dean, Deakin Business School",
       subtitle: "",
 

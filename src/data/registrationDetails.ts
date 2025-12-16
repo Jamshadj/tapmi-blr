@@ -65,7 +65,7 @@ export const participationContent = {
   eligibility:
     "Open to PhD scholars and early career researchers.",
   accommodation:
-    "Provided at MAHE Bengaluru Campus Hostel.",
+    "Participants are kindly requested to make their own accommodation arrangements. However, suggestions can be provided upon request.",
   travel:
     "Participants responsible for own travel arrangements.",
 

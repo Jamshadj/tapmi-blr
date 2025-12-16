@@ -151,7 +151,7 @@ export default function TrajectoriesSection() {
 
             {/* Heading */}
             <h2 className="text-white text-[42px] font-medium mb-6 tracking-tight">
-              Broad Area Trajectories for Presentation
+              Broad Trajectories for Presentation
             </h2>
 
             {/* Subtitle */}
@@ -199,7 +199,7 @@ export default function TrajectoriesSection() {
         <div className="md:hidden px-8 py-12">
           {/* Heading */}
           <h2 className="text-white text-[29px] font-medium mb-4 tracking-tight leading-[1.2] px-2">
-            Broad Area Trajectories for Presentation
+            Broad Trajectories for Presentation
           </h2>
 
           {/* Subtitle */}
