@@ -21,7 +21,7 @@ export default function EventVenueSection() {
 
           <a
             href="https://maps.app.goo.gl/PnQrV5bboqxAX2RJ8"
-            className="inline-block text-[16px] font-thin text-white/90 border-b-[1.5px] border-white/80 mb-8"
+            className="inline-block text-[16px] font-thin text-white/90 border-b-[1.5px] border-white/80 mb-8 "
           >
             View on Maps
           </a>
@@ -86,7 +86,7 @@ export default function EventVenueSection() {
             className="
               inline-block text-[18px] font-thin 
               text-white/90 border-b-[2px] border-white/80 
-              mb-10
+              mb-10 hover:text-[#436667] hover:border-[#436667] duration-300 transition-all
             "
           >
             View on Maps

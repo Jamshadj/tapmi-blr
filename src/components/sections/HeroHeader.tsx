@@ -93,16 +93,16 @@ export default function HeroHeader() {
             {/* SLIDING SIDEBAR */}
             <motion.div
               className="fixed top-0 right-0 h-full w-full bg-[#298A95] text-white z-50  flex flex-col justify-between"
-              initial={{ x: 300 }}
-              animate={{ x: 0 }}
-              exit={{ x: 300 }}
+              initial={{ x: 300 , opacity: 0 }}
+              animate={{ x: 0  , opacity: 1 }}
+              exit={{ x: 300, opacity: 0 }}
               transition={{ duration: 0.45, ease: "easeInOut" }} // smooth & slow
             >
               {/* CLOSE ICON */}
            <div className="p-8 flex flex-col">
                <button
                 onClick={() => setOpen(false)}
-                className="text-2xl font-light mb-10 self-end "
+                className="text-4xl font-light mb-10 self-end "
               >
                 ×
               </button>

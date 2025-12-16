@@ -31,8 +31,8 @@ export const registrationTable = {
       items: [
         {
           label: "Abstract Submission",
-          phd: "30 Dec 2025",
-          aca: "30 Dec 2025",
+          phd: "30 Jan 2026",
+          aca: "30 Jan 2026",
         },
         {
           label: "Registration Fees",
@@ -47,12 +47,12 @@ export const registrationTable = {
       items: [
         {
           label: "Extended Abstract Submission",
-          phd: "30 Jan 2026",
-          aca: "30 Jan 2026",
+          phd: "28 Feb 2026",
+          aca: "28 Feb 2026",
         },
       ],
       footnote:
-        " Due date for submission of extended abstracts is 30th January 2026 (only applicable for accepted papers).",
+        " Due date for submission of extended abstracts is 20th February 2026 (only applicable for accepted papers).",
     },
   ],
 };

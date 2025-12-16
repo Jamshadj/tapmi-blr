@@ -160,11 +160,11 @@ export default function TrajectoriesSection() {
             </p>
 
             {/* Trajectory Cards - Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 hover:cursor-pointer ">
               {trajectories.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white p-9 shadow-sm flex flex-col h-full"
+                  className="bg-white p-9 shadow-sm flex flex-col h-full hover:cursor-pointer hover:scale-101 transition-all duration-300"
                 >
                   {/* Icon */}
                   <div className="mb-6">
@@ -198,7 +198,7 @@ export default function TrajectoriesSection() {
         {/* Mobile Layout - Slider */}
         <div className="md:hidden px-8 py-12">
           {/* Heading */}
-          <h2 className="text-white text-[28px] font-medium mb-4 tracking-tight leading-[1.2] px-2">
+          <h2 className="text-white text-[29px] font-medium mb-4 tracking-tight leading-[1.2] px-2">
             Broad Area Trajectories for Presentation
           </h2>
 
